@@ -1,4 +1,6 @@
-﻿namespace Industry_Machine_Park.Shared
+﻿using System.Data.Common;
+
+namespace Industry_Machine_Park.Shared
 {
     public class Machine
     {

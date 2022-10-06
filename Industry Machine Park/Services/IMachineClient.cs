@@ -1,4 +1,4 @@
-﻿
+﻿using Industry_Machine_Park.Shared;
 
 namespace Industry_Machine_Park.Services
 {
