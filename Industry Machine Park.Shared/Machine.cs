@@ -7,6 +7,6 @@
         public string Type { get; set; } = String.Empty;
         public DateTime LastUpdated { get; set; } = default;
         public string Location { get; set; } = String.Empty;
-        public bool IsActive { get; set; } = default;
+        public bool IsActive { get; set; } = false;
     }
 }
