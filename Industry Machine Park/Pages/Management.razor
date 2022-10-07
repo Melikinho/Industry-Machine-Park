@@ -1,13 +1,12 @@
 ﻿@page "/Management"
-@inject HttpClient Http
+@inject HttpClient http
+@using Industry_Machine_Park.Services
 
 <PageTitle>Management</PageTitle>
 
 <h1>Management Central</h1>
 
-<p>This component demonstrates fetching data from the server.</p>
-
-@if (forecasts == null)
+@if (Machines == null)
 {
     <p><em>Loading...</em></p>
 }
@@ -16,20 +15,24 @@ else
     <table class="table">
         <thead>
             <tr>
+                <th>MachineID</th>
+                <th>Name</th>
+                <th>Type</th>
                 <th>Date</th>
-                <th>Temp. (C)</th>
-                <th>Temp. (F)</th>
-                <th>Summary</th>
+                <th>Location</th>
+                <th>Active</th>
             </tr>
         </thead>
         <tbody>
-            @foreach (var forecast in forecasts)
+            @foreach (var machine in Machines)
             {
                 <tr>
-                    <td>@forecast.Date.ToShortDateString()</td>
-                    <td>@forecast.TemperatureC</td>
-                    <td>@forecast.TemperatureF</td>
-                    <td>@forecast.Summary</td>
+                    <td>@machine.Id</td>
+                    <td>@machine.Name</td>
+                    <td>@machine.Type</td>
+                    <td>@machine.LastUpdated</td>
+                    <td>@machine.Location</td>
+                    <td>@machine.IsActive</td>
                 </tr>
             }
         </tbody>
@@ -37,21 +40,17 @@ else
 }
 
 @code {
-    private WeatherForecast[]? forecasts;
 
-    protected override async Task OnInitializedAsync()
-    {
-        forecasts = await Http.GetFromJsonAsync<WeatherForecast[]>("sample-data/weather.json");
+    [Inject]
+    public IMachineClient MachineClient { get; set; } = default!;
+
+    private List<Machine> Machines = new List<Machine>();
+
+    protected override async Task OnInitializedAsync(){
+        Machines = (await MachineClient.GetAsync()).ToList();
     }
 
-    public class WeatherForecast
-    {
-        public DateTime Date { get; set; }
 
-        public int TemperatureC { get; set; }
 
-        public string? Summary { get; set; }
 
-        public int TemperatureF => 32 + (int)(TemperatureC / 0.5556);
-    }
 }
