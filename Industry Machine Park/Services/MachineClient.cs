@@ -14,7 +14,7 @@ namespace Industry_Machine_Park.Services
 
         public async Task<IEnumerable<Machine>> GetAsync()
         {
-            DateTime LastUpdated = DateTime.Now.AddDays(Random.Shared.Next(100)).Date;
+            DateTime StartDate = DateTime.Now.AddDays(Random.Shared.Next(100)).Date;
 
             return new List<Machine>()
         {
@@ -44,6 +44,20 @@ namespace Industry_Machine_Park.Services
                 Name = "Machine Turtle",
                 Type = "Leak Sensor",
                 Location = "Luleå, Sweden",
+                IsActive = true
+            },
+             new Machine()
+            {
+                Name = "Machine Snorlax",
+                Type = "Grass Sensor",
+                Location = "Kiruna, Sweden",
+                IsActive = false
+            },
+            new Machine()
+            {
+                Name = "Machine Vulpix",
+                Type = "Rain Sensor",
+                Location = "Helsingborg, Sweden",
                 IsActive = true
             }
         };
