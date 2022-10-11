@@ -46,7 +46,7 @@ else
     [Inject]
     public IMachineClient MachineClient { get; set; } = default!;
 
-    private List<Machine> Machines = new List<Machine>();
+    private List<Device> Machines = new List<Device>();
 
     protected override async Task OnInitializedAsync(){
         Machines = (await MachineClient.GetAsync()).ToList();

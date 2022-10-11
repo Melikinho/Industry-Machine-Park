@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Industry Machine Park", "In
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Industry Machine Park.Shared", "Industry Machine Park.Shared\Industry Machine Park.Shared.csproj", "{6199101C-8E18-4A23-A87F-FE9FABCF76B1}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Industry Machine Park.Server", "Industry Machine Park.Server\Industry Machine Park.Server.csproj", "{ACB81473-B847-467E-B995-42790A7CE72E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -21,6 +23,10 @@ Global
 		{6199101C-8E18-4A23-A87F-FE9FABCF76B1}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6199101C-8E18-4A23-A87F-FE9FABCF76B1}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6199101C-8E18-4A23-A87F-FE9FABCF76B1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{ACB81473-B847-467E-B995-42790A7CE72E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ACB81473-B847-467E-B995-42790A7CE72E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ACB81473-B847-467E-B995-42790A7CE72E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ACB81473-B847-467E-B995-42790A7CE72E}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

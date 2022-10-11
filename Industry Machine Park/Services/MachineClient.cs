@@ -12,48 +12,48 @@ namespace Industry_Machine_Park.Services
             this.httpClient = httpClient;
         }
 
-        public async Task<IEnumerable<Machine>> GetAsync()
+        public async Task<IEnumerable<Device>> GetAsync()
         {
             DateTime StartDate = DateTime.Now.AddDays(Random.Shared.Next(100)).Date;
 
-            return new List<Machine>()
+            return new List<Device>()
         {
-            new Machine()
+            new Device()
             {
                 Name = "Machine Eikido",
                 Type = "Waterpump sensor",
                 Location = "Stockholm, Sweden",
                 IsActive = true
             },
-            new Machine()
+            new Device()
             {
                 Name = "Machine Zabaleta",
                 Type = "Humidity Sensor",
                 Location = "Malmö, Sweden",
                 IsActive = true
             },
-            new Machine()
+            new Device()
             {
                 Name = "Machine Charmander",
                 Type = "Fire Sensor",
                 Location = "Gälve, Sweden",
                 IsActive = false
             },
-            new Machine()
+            new Device()
             {
                 Name = "Machine Turtle",
                 Type = "Leak Sensor",
                 Location = "Luleå, Sweden",
                 IsActive = true
             },
-             new Machine()
+             new Device()
             {
                 Name = "Machine Snorlax",
                 Type = "Grass Sensor",
                 Location = "Kiruna, Sweden",
                 IsActive = false
             },
-            new Machine()
+            new Device()
             {
                 Name = "Machine Vulpix",
                 Type = "Rain Sensor",

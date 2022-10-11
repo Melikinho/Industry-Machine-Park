@@ -1,0 +1,9 @@
+{
+  "profiles": {
+    "Industry_Machine_Park.Server": {
+      "commandName": "Project",
+      "commandLineArgs": "--port 7113",
+      "launchBrowser": false
+    }
+  }
+}
