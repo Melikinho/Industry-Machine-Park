@@ -3,11 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.3.32825.248
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Industry Machine Park", "Industry Machine Park\Industry Machine Park.csproj", "{9053B004-B782-4A67-A4A5-3E51B50BC03B}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Industry Machine Park", "Industry Machine Park\Industry Machine Park.csproj", "{9053B004-B782-4A67-A4A5-3E51B50BC03B}"
+	ProjectSection(ProjectDependencies) = postProject
+		{ACB81473-B847-467E-B995-42790A7CE72E} = {ACB81473-B847-467E-B995-42790A7CE72E}
+	EndProjectSection
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Industry Machine Park.Shared", "Industry Machine Park.Shared\Industry Machine Park.Shared.csproj", "{6199101C-8E18-4A23-A87F-FE9FABCF76B1}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Industry Machine Park.Shared", "Industry Machine Park.Shared\Industry Machine Park.Shared.csproj", "{6199101C-8E18-4A23-A87F-FE9FABCF76B1}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Industry Machine Park.Server", "Industry Machine Park.Server\Industry Machine Park.Server.csproj", "{ACB81473-B847-467E-B995-42790A7CE72E}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Industry Machine Park.Server", "Industry Machine Park.Server\Industry Machine Park.Server.csproj", "{ACB81473-B847-467E-B995-42790A7CE72E}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

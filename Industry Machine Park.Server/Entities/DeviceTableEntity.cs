@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Industry_Machine_Park.Server.Entities
 {
-    public class MachineTableEntity : TableEntity
+    public class DeviceTableEntity : TableEntity
     {
         public string Name { get; set; } = String.Empty;
         public string Type { get; set; } = String.Empty;
